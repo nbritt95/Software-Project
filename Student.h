@@ -1,3 +1,5 @@
+#ifndef	STUDENT_H
+#define STUDENT_H
 #include<iostream>
 
 class Student{
@@ -33,3 +35,5 @@ class Student{
 		}
 
 };
+
+#endif
