@@ -7,7 +7,7 @@ using namespace std;
 
 class Student{
 
-	private: //Should we use private?
+	private:
 		double gpa, examScore;
 		string name, idNumber;
 	
