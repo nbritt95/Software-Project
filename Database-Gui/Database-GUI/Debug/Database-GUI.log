@@ -1,0 +1,6 @@
+﻿  Log In.cpp
+  Courses.cpp
+  Generating Code...
+  Log In.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
+  Database-GUI.vcxproj -> C:\Users\Admin\source\repos\Database-GUI\Debug\Database-GUI.exe
