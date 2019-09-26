@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="software_projDataSet" targetNamespace="http://tempuri.org/software_projDataSet.xsd" xmlns:mstns="http://tempuri.org/software_projDataSet.xsd" xmlns="http://tempuri.org/software_projDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="software_projConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="software_projConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DatabaceGUI_Csharp.Properties.Settings.GlobalReference.Default.software_projConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="admin_tableTableAdapter" GeneratorDataComponentClassName="admin_tableTableAdapter" Name="admin_table" UserDataComponentName="admin_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="software_projConnectionString (Settings)" DbObjectName="software_proj.admin_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Admin_ID`, `First_Name`, `Last_Name`, `Password` FROM `admin_table`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="courses_tableTableAdapter" GeneratorDataComponentClassName="courses_tableTableAdapter" Name="courses_table" UserDataComponentName="courses_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="software_projConnectionString (Settings)" DbObjectName="software_proj.courses_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Course_ID`, `Course_Number`, `Course_Name`, `Start_Time`, `End_Time`, `Course_Days`, `Professor_Name` FROM `courses_table`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="grades_tableTableAdapter" GeneratorDataComponentClassName="grades_tableTableAdapter" Name="grades_table" UserDataComponentName="grades_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="software_projConnectionString (Settings)" DbObjectName="software_proj.grades_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Student_ID`, `Course_ID`, `Exam1_Grade`, `Exam2_Grade`, `Final_Exam_Grade`, `Final_Grade` FROM `grades_table`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="students_tableTableAdapter" GeneratorDataComponentClassName="students_tableTableAdapter" Name="students_table" UserDataComponentName="students_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="software_projConnectionString (Settings)" DbObjectName="software_proj.students_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Student_ID`, `Password`, `First_Name`, `Last_Name` FROM `students_table`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="software_projDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="software_projDataSet" msprop:Generator_UserDSName="software_projDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="admin_table" msprop:Generator_TableClassName="admin_tableDataTable" msprop:Generator_TableVarName="tableadmin_table" msprop:Generator_TablePropName="admin_table" msprop:Generator_RowDeletingName="admin_tableRowDeleting" msprop:Generator_RowChangingName="admin_tableRowChanging" msprop:Generator_RowEvHandlerName="admin_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="admin_tableRowDeleted" msprop:Generator_UserTableName="admin_table" msprop:Generator_RowChangedName="admin_tableRowChanged" msprop:Generator_RowEvArgName="admin_tableRowChangeEvent" msprop:Generator_RowClassName="admin_tableRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="courses_table" msprop:Generator_TableClassName="courses_tableDataTable" msprop:Generator_TableVarName="tablecourses_table" msprop:Generator_TablePropName="courses_table" msprop:Generator_RowDeletingName="courses_tableRowDeleting" msprop:Generator_RowChangingName="courses_tableRowChanging" msprop:Generator_RowEvHandlerName="courses_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="courses_tableRowDeleted" msprop:Generator_UserTableName="courses_table" msprop:Generator_RowChangedName="courses_tableRowChanged" msprop:Generator_RowEvArgName="courses_tableRowChangeEvent" msprop:Generator_RowClassName="courses_tableRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grades_table" msprop:Generator_TableClassName="grades_tableDataTable" msprop:Generator_TableVarName="tablegrades_table" msprop:Generator_TablePropName="grades_table" msprop:Generator_RowDeletingName="grades_tableRowDeleting" msprop:Generator_RowChangingName="grades_tableRowChanging" msprop:Generator_RowEvHandlerName="grades_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="grades_tableRowDeleted" msprop:Generator_UserTableName="grades_table" msprop:Generator_RowChangedName="grades_tableRowChanged" msprop:Generator_RowEvArgName="grades_tableRowChangeEvent" msprop:Generator_RowClassName="grades_tableRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="students_table" msprop:Generator_TableClassName="students_tableDataTable" msprop:Generator_TableVarName="tablestudents_table" msprop:Generator_TablePropName="students_table" msprop:Generator_RowDeletingName="students_tableRowDeleting" msprop:Generator_RowChangingName="students_tableRowChanging" msprop:Generator_RowEvHandlerName="students_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="students_tableRowDeleted" msprop:Generator_UserTableName="students_table" msprop:Generator_RowChangedName="students_tableRowChanged" msprop:Generator_RowEvArgName="students_tableRowChangeEvent" msprop:Generator_RowClassName="students_tableRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
