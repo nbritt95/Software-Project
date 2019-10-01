@@ -183,10 +183,18 @@ void courses::add_course_grade() {
 	setScores(grade);
 }
 void courses::edit_grade() {
-	unsigned examNumber;
-	cout << "What exam do you want to adjust grade: ";
-	cin >> examNumber;
-	cout << "New grade for the exam " << examNumber << " is: ";
+	void courses::edit_grade() {
+
+	if (noScore) {
+		cout << "There is no grade for the exam in this course" << endl;
+	}
+	else {
+		unsigned examNumber;
+		cout << "What exam do you want to adjust the grade: ";
+		cin >> examNumber;
+		cout << "New grade for the exam " << examNumber+1 << " is: ";
+		cin >> Score.at(examNumber);
+	}
 }
 	// the edit_grade() still in the process of implementation; dont use this
 //************************************************************************************************************************************
