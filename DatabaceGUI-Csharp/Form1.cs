@@ -30,16 +30,12 @@ namespace DatabaceGUI_Csharp
             {
                 string myConnection = "datasource=localhost;port=3306;username=;password=";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
-                //MySqlDataAdapter myDataAdapter = new MySqlDataAdapter();
-                //myDataAdapter.SelectCommand = new MySqlCommand("select * software_proj.admin_table ;", myConn);
-                //MySqlCommandBuilder cb = new MySqlCommandBuilder(myDataAdapter);
                 MySqlCommand SelectCommand = new MySqlCommand("select * from software_proj.admin_table where Admin_ID ='" + this.username_txt.Text + "' and Password='" + this.password_txt.Text + "';",myConn);
                 MySqlDataReader myReader;
                 myConn.Open();
                 myReader = SelectCommand.ExecuteReader();
                 int count = 0;
-                //DataSet ds = new DataSet();
-                //MessageBox.Show("Connected!");
+                
                 while(myReader.Read())
                 {
                     count = count = 1;
