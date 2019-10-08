@@ -12,8 +12,10 @@ const int START_END_DATE = 2;
 class courses {
 private:
 	string C_Name{ "0" }, C_Number{ "0" };
-	vector<string> Date;  // 1st index represent start date of the course, 2nd index represent final date of the course;
-	vector<string> Time;  // 1st index represent the time course start, 2nd index represent the time course end
+	vector<string> Date{ "0", "0" };  // 1st index represent start date of the course, 2nd index represent final date of the course;
+	vector<string> Time{ "0", "0" };  // 1st index represent the time course start, 2nd index represent the time course end
+	int Credit_per_hour{ 0 };
+	char Letter_grade{ '0' };
 	vector<double>Score;  
 	bool noScore{ true };
 public:
@@ -31,6 +33,8 @@ public:
 	void add_courses();
 	void add_course_grade();
 	void edit_grade();
+	char course_final_grade();
+	int course_credit();
 	void display();
 };
 
@@ -276,6 +280,40 @@ void courses::add_courses() {
 //************************************************************************************************************************************
 // the function display() will show all the information of the course in the following
 // course name, course number, exams, start date, end date, start time, end time
+int courses::course_credit() {
+	Credit_per_hour = C_Number.at(1) - 48 ; // course's credit per hour is the second digit in the course number
+	return Credit_per_hour;
+}
+char courses:: course_final_grade() {
+	char letterGrade;
+	if (Score.size() == 4) {
+		double sum{ 0 };
+		
+		for (unsigned i{ 0 }; i < 4; ++i) {
+			sum += Score.at(i);
+		}
+		
+		if (sum >= 90) {
+			letterGrade = 'A';
+		}
+		else if (sum >= 80) {
+			letterGrade = 'B';
+		}
+		else if (sum >= 70) {
+			letterGrade = 'C';
+		}
+		else if (sum >= 60) {
+			letterGrade = 'D';
+		}
+		else
+			letterGrade = 'F';
+	}
+	else {
+		cout << "Not enough 4 scores" << endl; // default is 4 scores for each class;
+		letterGrade = 'N';                     // indicate not enough scores
+	}
+	return letterGrade;
+}
 void courses::display() {
 	cout << "course name: " << C_Name << endl;
 	cout << "course number: " << C_Number << endl;
