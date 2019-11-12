@@ -92,7 +92,7 @@ double student::get_totalGPA() //get sum of GPA from courses
 	{
 		for (int i = 0; i < size; i++)
 		{
-			totalGPA += (takenCourses[i].course_final_gpa() * takenCourses[i].course_credit());
+			totalGPA += (takenCourses[i].course_final_grade() * takenCourses[i].course_credit());
 		}
 	}
 
