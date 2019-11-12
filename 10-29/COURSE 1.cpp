@@ -280,7 +280,7 @@ bool DetermineCourse(string &major, bool &quit, key &first_key) {
 	} while (!quit);
 	return check;
 }
-bool DetermineCourseNumber(string &C_number, key first_key, unsigned &second_key) {
+bool DetermineCourseNumber(string &C_number,COURSE_NUMBER, key first_key, unsigned &second_key) {
 	bool quit = false;
 	bool check;  // check if the input course number is in the list of specific that we offer or not
 	do {
